@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$usuario = "root";
-$clave = "";
+$usuario = "u178928053_sofi_agos";
+$clave = "*1ZgLJfjQ";
 $bd = "u178928053_examen"; // Elimina el espacio al final
 
 $conn = new mysqli($host, $usuario, $clave, $bd);

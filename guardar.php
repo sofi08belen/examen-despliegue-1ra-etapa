@@ -1,19 +1,17 @@
 <?php
 include 'conexion.php';
 
-$correo = $_POST['email'];
-$contra= $_POST['contra'];
+$titulo = $_POST['titulo'];
+$contenido= $_POST['cuerpo'];
 
-$sql = "INSERT INTO usuarios (email, contrasenha) VALUES (?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ss", $nombre, $email);
+$sql = "INSERT INTO publicaciones (titulo, contenido) VALUES ('$titulo', '$contenido')";
+$stmt = $conn->query($sql);
 
-if ($stmt->execute()) {
+if ($conn->insert_id) {
     echo "Registro exitoso.";
 } else {
     echo "Error: " . $conn->error;
 }
 
-$stmt->close();
 $conn->close();
 ?>
