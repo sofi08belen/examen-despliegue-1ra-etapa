@@ -1,10 +1,10 @@
 <?php
-include 'db.php';
+include 'conexion.php';
 
-$nombre = $_POST['nombre'];
-$email = $_POST['email'];
+$correo = $_POST['email'];
+$contra= $_POST['contra'];
 
-$sql = "INSERT INTO usuarios (nombre, email) VALUES (?, ?)";
+$sql = "INSERT INTO usuarios (email, contrasenha) VALUES (?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $nombre, $email);
 

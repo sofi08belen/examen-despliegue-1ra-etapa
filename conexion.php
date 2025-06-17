@@ -4,7 +4,11 @@ $usuario = "root"; // tu usuario
 $clave = ""; // tu contraseña
 $bd = "u178928053_examen "; // nombre de tu base de datos
 
-$conn = new mysqli($host, $usuario, $clave, $bd);
+$conn = new mysqli(
+    hostname: "localhost",
+    password: "",
+    database: "u178928053_examen "
+);
 
 // Verifica conexión
 if ($conn->connect_error) {
