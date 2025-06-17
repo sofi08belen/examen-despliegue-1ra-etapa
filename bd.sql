@@ -8,3 +8,4 @@ CREATE TABLE publicaciones (
   titulo VARCHAR(255),
   contenido TEXT
 );
+
