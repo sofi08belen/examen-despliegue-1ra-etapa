@@ -1,14 +1,20 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario Básico</title>
 </head>
 <body>
-    <form action="./guardar.php" method="post"></form>
-    <input type="email" name="correo">
-    <input type="password" name="contra">
-    <button>Guardar</button>
+    <h2>Formulario de Registro</h2>
+    <form action="./guardar.php" method="post">
+        <label for="email">Email:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" name="contra" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>

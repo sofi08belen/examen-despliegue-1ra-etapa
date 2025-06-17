@@ -1,11 +1,19 @@
 <?php
-$correo $_POST["email"];
-$contra $_POST["contra"];
+include 'db.php';
 
-include "conexion.php"
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
 
-$sql = "INSER INTO usuarios (email, contrasenha) values ('$correo' , '$contra')";
+$sql = "INSERT INTO usuarios (nombre, email) VALUES (?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $nombre, $email);
 
-$conexion->query ($sql);
+if ($stmt->execute()) {
+    echo "Registro exitoso.";
+} else {
+    echo "Error: " . $conn->error;
+}
 
-echo "Registro guardado"
+$stmt->close();
+$conn->close();
+?>
