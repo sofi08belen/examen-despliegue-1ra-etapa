@@ -7,7 +7,7 @@ $bd = "u178928053_examen "; // nombre de tu base de datos
 $conn = new mysqli(
     hostname: "localhost",
     password: "",
-    database: "u178928053_examen "
+    database: "u178928053_examen"
 );
 
 // Verifica conexión
